@@ -87,7 +87,7 @@
     <script>
         document.getElementById('loginButton').addEventListener('click', () => {
             // Update the redirect_to parameter to point to your server's /google-login route
-            const redirectTo = encodeURIComponent('http://localhost:10000/google-login');
+            const redirectTo = encodeURIComponent('https://reachinbox-1.onrender.com/google-login');
             window.location.href = `https://hiring.reachinbox.xyz/api/v1/auth/google-login?redirect_to=${redirectTo}`;
         });
     </script>
