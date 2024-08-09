@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="../styles/global.css" />
+    <link rel="stylesheet" href="../styles/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Open Sans:wght@400;600&display=swap"
+    />
+  </head>
+  <body>
+    <div class="login">
+      <header class="header">
+        <img
+          class="logo-12-icon"
+          loading="lazy"
+          alt=""
+          src="../logo.png"
+        />
+      </header>
+      <section class="content">
+        <img
+          class="noise-animation-icon"
+          alt=""
+          src="./public/noiseanimation@2x.png"
+        />
+
+        <div class="content-inner">
+          <div class="frame-parent">
+            <div class="new-account-btn-container-wrapper">
+              <div class="new-account-btn-container">
+                <div class="new-account-btn-wrapper">
+                  <div class="create-a-new">Create a new account</div>
+                  <div class="new-account-btn-wrapper-inner">
+                    <div class="google-signup-btn-container-wrapper">
+                      <div class="google-signup-btn-container">
+                        <img
+                          class="google-signup-btn-wrapper"
+                          loading="lazy"
+                          alt=""
+                          src="./public/frame.svg"
+                        />
+
+                        <div class="sign-up-with" id="loginButton">Sign Up with Google</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="frame-wrapper">
+              <div class="login-btn-container-parent">
+                <div class="login-btn-container">
+                  <button class="buttonfilledssfalsefalse">
+                    <div class="button">Create an Account</div>
+                  </button>
+                </div>
+                <div class="already-have-an-account-parent">
+                  <div class="already-have-an">Already have an account?</div>
+                  <div class="sign-in">Sign In</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer class="login-inner">
+        <div class="frame-group">
+          <div class="xquare-labs-bw-1-parent">
+            <img
+              class="xquare-labs-bw-1"
+              alt=""
+              src="./public/xquare-labs-bw-1@2x.png"
+            />
+
+            
+          </div>
+          <div class="planaire-all-rights">
+            © 2023 Reachinbox. All rights reserved.
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script>
+        document.getElementById('loginButton').addEventListener('click', () => {
+            // Update the redirect_to parameter to point to your server's /google-login route
+            const redirectTo = encodeURIComponent('/google-login');
+            window.location.href = `https://hiring.reachinbox.xyz/api/v1/auth/google-login?redirect_to=${redirectTo}`;
+        });
+    </script>
+  </body>
+</html>
